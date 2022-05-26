@@ -3,7 +3,24 @@
     # are not a multiple of 5, between 2000 and 3200 (both included).The numbers 
     # obtained should be printed in a comma-separated sequence on a single line.
 
-for item in range(2000, 3200):
+for item in range(2000, 3201):
     if item % 5 != 0 and item % 7 == 0:
         print(item, end=", ")
+print('\n')
+
+
+#  Question 2
+    # Write a program which can compute the factorial of a given numbers.The results 
+    # should be printed in a comma-separated sequence on a single line.Suppose the 
+    # following input is supplied to the program: 8 Then, the output should be:40320
+
+def factorial(num):
+    ans = 1
+    for i in range(1, num+1):
+        ans *= i
+    return ans
+        
+
+print(factorial(8))
+
 
