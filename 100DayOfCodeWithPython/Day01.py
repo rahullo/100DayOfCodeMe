@@ -14,13 +14,23 @@ print('\n')
     # should be printed in a comma-separated sequence on a single line.Suppose the 
     # following input is supplied to the program: 8 Then, the output should be:40320
 
+
+# Solution using for loop and time complexity Of O(n) where n is number of loop
 def factorial(num):
+    # let (ans) as a storing value of multiplication in each iteration
     ans = 1
+    # iterate through 1 to num+1(we are taking 4) therefore we iterate till i become 4
     for i in range(1, num+1):
         ans *= i
     return ans
+# solution using recursion and time complexity of O(n)
+def factorialRecursion(num):
+    # return the recursion when base case is reached to stop infinite loop
+    if num == 1:
+        return num
+    return num * factorialRecursion(num-1) #this line is basically 4! = 4 * 3!
         
 
-print(factorial(8))
+print(factorialRecursion(4))
 
 
