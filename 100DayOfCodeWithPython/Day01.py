@@ -23,6 +23,9 @@ def factorial(num):
     for i in range(1, num+1):
         ans *= i
     return ans
+
+factorial(4)
+
 # solution using recursion and time complexity of O(n)
 def factorialRecursion(num):
     # return the recursion when base case is reached to stop infinite loop
@@ -31,6 +34,40 @@ def factorialRecursion(num):
     return num * factorialRecursion(num-1) #this line is basically 4! = 4 * 3!
         
 
-print(factorialRecursion(4))
+factorialRecursion(4)
 
+
+# Question 3
+    # With a given integral number n, write a program to generate a dictionary that contains 
+    # (i, i x i) such that is an integral number between 1 and n (both included). and then 
+    # the program should print the dictionary.Suppose the following input is supplied to the
+    #  program: 8 Then, the output should be:
+
+    # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
+
+def dictionary(num):
+    ans = {}
+    for i in range(1, num+1):
+        ans[i] = i*i
+    return ans
+
+print(dictionary(8))
+
+# Using dictionary Comprehension
+def dictionaryComprehension(num):
+    ans = {i: i*i for i in range(1, num+1)}
+    print(ans)
+
+dictionaryComprehension(8)
+
+# Using while loop
+def dictionaryWhile(num):
+    ans = {}
+    i = 1
+    while i < num+1:
+        ans[i] = i*i
+        i+=1
+    return ans
+
+print(dictionaryWhile(8))
 
